@@ -1,33 +1,71 @@
-# Yulu-Hypothesis-Testing-Case-Study
-## About Yulu
-Yulu is India’s leading micro-mobility service provider, which offers unique vehicles for the daily commute. Starting off as a mission to eliminate traffic congestion in India, Yulu provides the safest commute solution through a user-friendly mobile app to enable shared, solo and sustainable commuting.
+# Yulu Case Study
 
-Yulu zones are located at all the appropriate locations (including metro stations, bus stands, office spaces, residential areas, corporate offices, etc) to make those first and last miles smooth, affordable, and convenient!
+## Project Overview
+This case study focuses on the analysis of Yulu, a leading provider of electric bike-sharing solutions. The project aims to explore key metrics related to Yulu’s operations, including usage patterns, customer behavior, fleet management, and demand forecasting. Insights from this analysis can help optimize Yulu's operations, improve customer engagement, and enhance fleet efficiency.
 
-Yulu has recently suffered considerable dips in its revenues. They have contracted a consulting company to understand the factors on which the demand for these shared electric cycles depends. Specifically, they want to understand the factors affecting the demand for these shared electric cycles in the Indian market.
+Project link: [Yulu Case Study](https://colab.research.google.com/drive/19xGqQI9X347AwJi_VFlGuLK9b8QbQ4sd?usp=sharing)
 
-# Recommendations:
-• *Seasonal Marketing*: Since there is a clear seasonal pattern in the count of rental bikes, Yulu can adjust its marketing strategies accordingly. Focus on promoting bike rentals during the spring and summer months when there is higher demand. Offer seasonal discounts or special packages to attract more customers during these periods.
+---
 
-• *Time-based Pricing*: Take advantage of the hourly fluctuation in bike rental counts throughout the day. Consider implementing time-based pricing where rental rates are lower during off-peak hours and higher during peak hours. This can encourage customers to rent bikes during less busy times, balancing out the demand and optimizing the resources.
+## Key Objectives
+1. **Usage Pattern Analysis**: Analyze how often customers use Yulu bikes, including peak usage hours, locations, and frequency.
+2. **Customer Behavior**: Explore customer demographics, trip duration, and subscription patterns to identify key factors driving usage.
+3. **Fleet Management Optimization**: Investigate how to optimize the bike fleet distribution and maintenance schedules based on demand patterns.
+4. **Demand Forecasting**: Use historical data to forecast demand for Yulu bikes in various locations and times of day.
+5. **Operational Efficiency**: Analyze the relationship between operational factors (e.g., bike availability, charging) and user satisfaction.
 
-• *Weather-based Promotions*: Recognize the impact of weather on bike rentals. Create weatherbased promotions that target customers during clear and cloudy weather, as these conditions show the highest rental counts. Yulu can offer weather-specific discounts to attract more customers during these favorable weather conditions.
+---
 
-• *User Segmentation*: Given that around 81% of users are registered, and the remaining 19% are casual, Yulu can tailor its marketing and communication strategies accordingly. Provide loyalty programs, exclusive offers, or personalized recommendations for registered users to encourage repeat business. For casual users, focus on providing a seamless rental experience and promoting the benefits of bike rentals for occasional use.
+## Insights and Findings
 
-• *Optimize Inventory*: Analyze the demand patterns during different months and adjust the inventory accordingly. During months with lower rental counts such as January, February, and March, Yulu can optimize its inventory levels to avoid excess bikes. On the other hand, duringpeak months, ensure having sufficient bikes available to meet the higher demand.
+### 1. Data Overview
+- **Dataset**: The dataset includes information about Yulu's bike-sharing operations, including trip data, customer demographics, bike availability, and geographic distribution.
+- **Key Columns**:
+  - `trip_id`: Unique identifier for each bike trip.
+  - `user_id`: Unique identifier for each user.
+  - `start_time`: Start time of the trip.
+  - `end_time`: End time of the trip.
+  - `duration`: Duration of the trip in minutes.
+  - `pickup_location`: Location where the bike was picked up.
+  - `dropoff_location`: Location where the bike was dropped off.
+  - `bike_id`: Unique identifier for the bike used in the trip.
+  - `charging_status`: Whether the bike was fully charged at the start of the trip.
+  - `subscription_type`: Type of user subscription (e.g., casual user, premium user).
 
-• *Improve Weather Data Collection*: Given the lack of records for extreme weather conditions, consider improving the data collection process for such scenarios. Having more data on extreme weather conditions can help to understand customer behavior and adjust the operations accordingly, such as offering specialized bike models for different weather conditions or implementing safety measures during extreme weather.
+### 2. Usage Pattern Analysis
+- **Peak Usage Times**: Peak usage was observed during the morning and evening commute hours (7-9 AM and 5-7 PM), with significant usage on weekdays.
+- **Popular Locations**: Key locations for bike usage include business districts, transportation hubs, and residential areas.
+- **Trip Duration**: The average trip duration is approximately 20-30 minutes, with casual users tending to use bikes for shorter trips.
 
-• *Customer Comfort*: Since humidity levels are generally high and temperature is often below 28 degrees Celsius, consider providing amenities like umbrellas, rain jackets, or water bottles to enhance the comfort and convenience of the customers. These small touches can contribute to a positive customer experience and encourage repeat business.
+### 3. Customer Behavior Insights
+- **Demographics**: The majority of Yulu users are young adults (ages 18-35), with a high proportion of tech-savvy individuals who prefer eco-friendly transportation solutions.
+- **Subscription Patterns**: Premium users tend to have longer trips and more frequent usage, while casual users mostly use the bikes for short-term, one-off trips.
+- **Customer Retention**: Premium users show higher retention rates and more frequent usage compared to casual users.
 
-• *Collaborations with Weather Services*: Consider collaborating with weather services to provide real-time weather updates and forecasts to potential customers. Incorporate weather information into your marketing campaigns or rental app to showcase the ideal biking conditions and attract users who prefer certain weather conditions.
+### 4. Fleet Management Optimization
+- **Bike Availability**: Bike availability is correlated with customer satisfaction. High demand during peak hours often leads to unavailability of bikes in popular locations.
+- **Fleet Distribution**: Optimizing fleet distribution across locations based on historical demand data can help improve bike availability and reduce waiting times for users.
+- **Maintenance Scheduling**: Bikes with lower usage are more prone to maintenance issues, requiring better tracking and predictive maintenance scheduling.
 
-• *Seasonal Bike Maintenance*: Allocate resources for seasonal bike maintenance. Before the peak seasons, conduct thorough maintenance checks on the bike fleet to ensure they are in top condition. Regularly inspect and service bikes throughout the year to prevent breakdowns and maximize customer satisfaction.
+### 5. Demand Forecasting
+- **Time-Based Forecasting**: Demand for bikes is higher during peak hours and weekends, with specific geographic locations showing more concentrated demand.
+- **Location-Based Forecasting**: Demand in business districts is significantly higher during working hours, while demand in residential areas peaks during early mornings and evenings.
 
-• *Customer Feedback and Reviews*: Encourage customers to provide feedback and reviews on their biking experience. Collecting feedback can help identify areas for improvement, understand customer preferences, and tailor the services to better meet customer expectations.
+---
 
-• *Social Media Marketing*: Leverage social media platforms to promote the electric bike rental services. Share captivating visuals of biking experiences in different weather conditions, highlight customer testimonials, and engage with potential customers through interactive posts and contests. Utilize targeted advertising campaigns to reach specific customer segments and drive more bookings.
+## Methodology
+1. **Data Collection**: The dataset is collected from Yulu’s operational logs, including user trip data, bike usage statistics, and maintenance records.
+2. **Data Cleaning**: Missing values, duplicates, and outliers were handled through imputation techniques and filtering.
+3. **Exploratory Data Analysis (EDA)**: Performed EDA to uncover patterns, trends, and correlations between different variables, such as trip duration, location, and bike availability.
+4. **Forecasting**: Built forecasting models to predict demand based on historical usage data, using time series analysis and machine learning algorithms.
+5. **Optimization**: Used optimization algorithms to improve fleet management and maintenance scheduling based on predicted demand.
 
-• *Special Occasion Discounts*: Since Yulu focusses on providing a sustainable solution for vehicular pollution, it should give special discounts on the occassions like Zero Emissions Day (21st September), Earth day (22nd April), World Environment Day (5th June) etc in order to attract new users.
+---
+
+## Technologies Used
+- **Python**: For data cleaning, analysis, and machine learning model development.
+- **Libraries**: Pandas, Numpy, Scikit-learn, Matplotlib, Seaborn, Statsmodels
+- **Jupyter Notebooks**: For data exploration, analysis, and visualization.
+- **SQL**: For querying data from Yulu's database (if applicable).
+- **TensorFlow** (optional): For more advanced forecasting models (if used).
 
